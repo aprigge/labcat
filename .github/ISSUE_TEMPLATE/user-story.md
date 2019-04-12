@@ -12,6 +12,5 @@ I want <some goal>
 so that <some reason>.
 
 Acceptance Criteria:
-- [ ] 
-- [ ]
-- [ ]
+- [ ] something
+- [ ] something else
