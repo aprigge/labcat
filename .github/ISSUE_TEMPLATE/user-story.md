@@ -2,7 +2,7 @@
 name: User Story
 about: Request a new feature or enhancement
 title: ''
-labels: ''
+labels: story
 assignees: ''
 
 ---
