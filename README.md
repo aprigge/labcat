@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/joshuago78/labcat.svg?branch=master)](https://travis-ci.com/joshuago78/labcat)
+
 # labcat
 A simple catalog for materials in the IS Lab.
 
