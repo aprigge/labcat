@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/joshuago78/labcat.svg?branch=master)](https://travis-ci.com/joshuago78/labcat)
+[![Build Status](https://travis-ci.com/joshuago78/labcat.svg?branch=master)](https://travis-ci.com/joshuago78/labcat). [![Coverage Status](https://coveralls.io/repos/github/joshuago78/labcat/badge.svg?branch=master)](https://coveralls.io/github/joshuago78/labcat?branch=master)
 
 # labcat
 A simple catalog for materials in the IS Lab.
