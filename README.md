@@ -48,3 +48,8 @@ Steps to take when working on this project
 9. Push changes to github: `git push origin <your branch>`
 10. Create a Pull Request in Github, assign the instructor as a reviewer.
 11. Reviewer will review the code, and if it is OK and the tests pass, then merge.
+
+## Initial Prototypes
+
+Some frontend prototypes have been drawn using Figma at the link below:
+https://www.figma.com/file/IVjtY6Pc9NC9cqVIQzPVZPad/IS-Lab-Catalog-App?node-id=0%3A1
