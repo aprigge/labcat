@@ -9,3 +9,10 @@ class Book(models.Model):
 
 	def __repr__(self):
 		return '<Book {}: {}>'.format(self.id, self.title)
+
+class Publisher(models.Model):
+	publisher_name = models.Charfield(max_length=256)
+	publisher_city = models.Charfield(max_length = 64, blank=True)
+
+	def __repr__(self):
+		return '<{}: {}>'.format(self.publisher_city, self.publisher_name)
