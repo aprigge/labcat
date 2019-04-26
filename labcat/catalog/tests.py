@@ -14,3 +14,5 @@ class ModelsTestCase(TestCase):
 	def test_book_model(self):
 		book = Book.objects.get(barcode='12345678910')
 		self.assertEqual(repr(book), '<Book 1: Test Driven Development: By Example>')
+
+

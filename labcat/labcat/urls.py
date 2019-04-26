@@ -20,5 +20,6 @@ from catalog.views import BookDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('book/<int:pk>', BookDetailView.as_view())
+    path('book/<int:pk>', BookDetailView.as_view()),
+    path('publisher/<int:pk>', PublisherDetailView.as_view())
 ]
