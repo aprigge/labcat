@@ -12,9 +12,19 @@ class Book(models.Model):
         return '<Book {}: {}>'.format(self.id, self.title)
 
 
+class Author(models.Model):
+    first_name = models.CharField(max_length=32)
+    middle_name = models.CharField(max_length=32, blank=True)
+    last_name = models.CharField(max_length=32)
+
+    def __repr__(self):
+        return '<Author {}: {} {} {}>'.format(self.id, self.first_name, self.middle_name, self.last_name)
+
+      
 class Publisher(models.Model):
     publisher_name = models.CharField(max_length=256)
     publisher_city = models.CharField(max_length = 64, blank=True)
 
     def __repr__(self):
         return '<Publisher {}: {}>'.format(self.id, self.publisher_name)
+      
