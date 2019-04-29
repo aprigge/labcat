@@ -19,4 +19,11 @@ class Author(models.Model):
     def __repr__(self):
         return '<Author {}: {} {} {}>'.format(self.id, self.first_name, self.middle_name, self.last_name)
 
-# Create your models here.
+      
+class Publisher(models.Model):
+    publisher_name = models.CharField(max_length=256)
+    publisher_city = models.CharField(max_length = 64, blank=True)
+
+    def __repr__(self):
+        return '<Publisher {}: {}>'.format(self.id, self.publisher_name)
+      

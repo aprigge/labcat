@@ -1,5 +1,6 @@
 from django.test import TestCase
-from .models import Book, Author
+
+from .models import Book, Author, Publisher
 
 
 class ModelsTestCase(TestCase):
@@ -24,3 +25,15 @@ class ModelsTestCase(TestCase):
             first_name='Joshua', middle_name='Bruin', last_name='Gomez')
         self.assertEqual(
             repr(author), '<Author 1: Joshua Bruin Gomez>')
+
+
+class PublisherTestCase(TestCase):
+
+    def setUp(self):
+        publisher = Publisher.objects.create(
+            publisher_name = 'Rizzoli',
+            publisher_city = 'New York')
+
+    def test_publisher_model(self):
+        publisher = Publisher.objects.get(publisher_name='Rizzoli')
+        self.assertEqual(repr(publisher), '<Publisher 1: Rizzoli>')
