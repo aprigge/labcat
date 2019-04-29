@@ -4,8 +4,10 @@
   <ul>
     {% for book in book_list %}
       <li>
-        <h1>{{ book.title }}</h1> 
-	<h2>({{book.author}})</h2>
+        <h1>{{ book.title }}</h1>
+        {% for author in book.authors.all %}
+	      <h2>({{author.last_name}}, {{author.first_name}})</h2>
+        {% endfor %}
       </li>
     {% endfor %}
   </ul>
