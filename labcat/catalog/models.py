@@ -7,6 +7,9 @@ class Book(models.Model):
     callnum = models.CharField(max_length=32, blank=True)
     barcode = models.CharField(max_length=32, blank=True)
 
+   	# adding many-to-many relationship
+   	authors = models.ManyToManyField(Author)
+
     def __repr__(self):
         return '<Book {}: {}>'.format(self.id, self.title)
 
