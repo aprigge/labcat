@@ -19,6 +19,7 @@ class PublisherDetailView(DetailView):
 
 
 class AuthorListView(ListView):
+
     model = Author
     
     def get_queryset(self):
@@ -28,3 +29,4 @@ class AuthorListView(ListView):
 def list(request):
     list = Publisher.objects.order_by('publisher_name')
     return render(request, 'catalog/PublisherList.html', {'publisherList': list})
+
