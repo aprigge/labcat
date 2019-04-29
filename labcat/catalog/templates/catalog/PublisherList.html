@@ -1,0 +1,16 @@
+
+<html>
+	<head>
+		<title>Publisher List</title>
+	</head>
+	<body>
+        <div class="container">
+
+            {% for publisher in publisherList %}
+              <div class="row" >
+                {{ publisher.publisher_name }}
+              </div>
+            {% endfor %}  
+        </div>
+  </body>
+</html>
