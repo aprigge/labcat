@@ -10,3 +10,7 @@ class BookDetailView(DetailView):
 	
 class PublisherDetailView(DetailView):
 	model = Publisher
+
+def list(request):
+	list = Publisher.objects.order_by('publisher_name')
+	return render(request, 'catalog/PublisherList.html', {'publisherList': list})

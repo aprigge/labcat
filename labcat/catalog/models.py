@@ -17,3 +17,4 @@ class Publisher(models.Model):
 
     def __repr__(self):
         return '<Publisher {}: {}>'.format(self.id, self.publisher_name)
+
