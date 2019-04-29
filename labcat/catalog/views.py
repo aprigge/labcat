@@ -14,4 +14,4 @@ class PublisherDetailView(DetailView):
 class AuthorListView(ListView):
 	model = Author
 	def get_queryset(self):
-        	return self.model.objects.order_by('author')
+        	return self.model.objects.order_by('last_name')

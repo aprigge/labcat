@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>List of authors</h1>
+  {% if author_list %}
+  <ul>
+    {% for author in author_list %}
+      <li>
+        <b> Author name: ({{author.first_name}}) ({{author.last_name}}) </b>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no authors.</p>
+  {% endif %}       
+{% endblock %}
