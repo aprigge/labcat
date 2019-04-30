@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>{% block title %}Title Here{% endblock %}</title>
     <link rel="stylesheet" href="/css.css">
     <link rel="stylesheet" href="/supplemental_css.css">
   </head>
-  
+
   <body>
-    <header>
-    </header>
+    <div id ="header">
+        {% block header %}
+        {% endblock %}
+    </div>
+    <div id ="body">
+        {% block body %}
+        {% endblock %}
+    </div>
+    <div id ="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
     <script src="javascript.js"></script>
     <script src="supplemental_javascript.js"></script>
   </body>
-
-  <footer>
-  </footer>
 </html>
