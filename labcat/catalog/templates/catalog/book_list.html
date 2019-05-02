@@ -1,5 +1,6 @@
 {% block supplemental_css %}
-   <link rel="stylesheet" href="book_list.css">
+   {% load static %}
+    <link rel="stylesheet" type="test/css" href="{% static 'catalog/book_list.css' %}">
 {% endblock %}
 
 
