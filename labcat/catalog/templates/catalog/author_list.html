@@ -1,16 +1,22 @@
+{% block content %}
 <html>
 	<head>
 		<title>Authors</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'author_list.css' %}">
 	</head>
 	<body>
-		<h2>Authors List</h2>
-		{% for author in author_list %}
-		<h3>{{author.first_name}} {{author.last_name}}</h3>
+		<h1>Authors List</h1>
 		<ul>
-		{% for book in author.book_set.all %}
-			<li>{{book.title}}</li>
-		{% endfor %}
+			{% for author in author_list %}
+			<h1>{{author.first_name}} {{author.last_name}}</h1>
+			<ul>
+			{% for book in author.book_set.all %}
+				<li><h2>{{book.title}}</h2></li>
+			{% endfor %}
+			</ul>
+			{% endfor %}
 		</ul>
-		{% endfor %}
 	</body>
 </html>
+{% endblock %}
