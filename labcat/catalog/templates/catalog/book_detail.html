@@ -1,16 +1,47 @@
+
+<!-- book_detail.html -->
+{% extends "catalog/base.html" %} <!--Use extend to build off the base the template -->
 <html>
 	<head>
-		<title>{{object.title}}</title>
+		<title>{% block title %}IS Lab Catalog | Book Detail: {{object.title}}{% endblock %}</title>
 	</head>
-	<body>
-		<h2>{{object.title}}</h2>
-		<dl>
-			<dt>Volume/Edition</dt>
-			<dd>{{object.volume}}</dd>
-			<dt>Call Number</dt>
-			<dd>{{object.callnum}}</dd>
-			<dt>Barcode</dt>
-			<dd>{{object.barcode}}</dd>
-		</dl>
-	</body>
+<!-- overriding base body tag -->
+{% block body %}
+<!-- begin breadcrumb -->
+    <nav aria-label="breadcrumb">
+	  <ol class="breadcrumb">
+	    <li class="breadcrumb-item"><a href="#">Home</a></li>
+	    <li class="breadcrumb-item"><a href="#">Catalog</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Data</li>
+	  </ol>
+	</nav>
+<!-- end breadcrumb -->
+<!-- begin book detail-->
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+			<h4 class="display-4">{{object.title}}</h4>
+			<h5 class="display-5">by {{object.authors}}</h5><br><br>
+				<table class="table table-striped">
+				  <tbody>
+				    <tr>
+				      <th scope="row">Volume/Edition</th>
+				      <td>{{object.volume}}</td>
+
+				    </tr>
+				    <tr>
+				      <th scope="row">Call Number</th>
+				      <td>{{object.callnum}}</td>
+
+				    </tr>
+				    <tr>
+				      <th scope="row">Bar Code</th>
+				      <td>{{object.barcode}}</td>
+
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+<!-- end book detail -->
+{% endblock %}
 </html>
